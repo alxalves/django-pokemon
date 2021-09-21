@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Ribbon List</h1>
+{% for ribbon in ribbon_list%}
+<a href="{% url 'ribbons_detail' ribbon.id %}">
+    <div class="card">
+        <div class="card-content">
+            <p>Name: {{ribbon.name}}</p>
+            <p>Color: {{ribbon.color}}</p>
+        </div>
+    </div>
+</a>
+{% endfor %}
+{% endblock %}
